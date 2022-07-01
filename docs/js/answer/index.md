@@ -3,8 +3,8 @@
 
 ## リンク
 
-* [JavaScript](./)
-    * [Quiz](./quiz/)
-    * [Answer](./answer/) 今ココ
+* [JavaScript](../)
+    * [Quiz](../quiz/)
+    * [Answer](./) 今ココ
 
 Comming soon...

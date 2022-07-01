@@ -3,9 +3,9 @@
 
 ## リンク
 
-* [JavaScript](./)
-    * [Quiz](./quiz/) 今ココ
-    * [Answer](./answer/)
+* [JavaScript](../)
+    * [Quiz](./) 今ココ
+    * [Answer](../answer/)
 
 
 ## 計算
