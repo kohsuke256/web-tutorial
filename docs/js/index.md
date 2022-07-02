@@ -128,7 +128,9 @@ console.log("Hello world!");
 
 ### 構文
 ```js
+// Ex.0
 if (conditional) {
+    // [処理]
     // 条件式が真のときのみ実行する内容
 }
 ```
@@ -139,50 +141,95 @@ if (conditional) {
 
 ### 応用(if - else)
 ```js
+ex1
 if (conditional) {
+    // [処理A]
     // 条件式が真のときのみ実行する内容
 } else {
+    // [処理B]
     // 条件式が偽のときのみ実行する内容
 }
 ```
 ### 応用(if - else if - else)
 ```js
+// Ex.2
 if (conditional1) { // conditional1 : 条件式1
+    // [処理A]
     // 条件式1が真のときのみ実行する内容
 } else if (conditional2) { // conditional2 : 条件式2
+    // [処理B]
     // 条件式1が偽で、条件式2が真のときのみ実行する内容
 } else {
+    // [処理C]
     // 条件式が全て偽のときのみ実行する内容
 }
 
+// Ex.2.1
 //以下のコードと同じ意味である
 if (conditional1) { // conditional1 : 条件式1
+    // [処理A]
     // 条件式1が真のときのみ実行する内容
 } else {
     if (conditional2) { // conditional2 : 条件式2
+        // [処理B]
         // 条件式1が偽で、条件式2が真のときのみ実行する内容
     } else {
+        // [処理C]
         // 条件式が全て偽のときのみ実行する内容
     }
 }
 
+// Ex.3
 // 条件は3つ以上あってもよい
 if (conditional1) { // conditional1 : 条件式1
+    // [処理A]
     // 条件式1が真のときのみ実行する内容
 } else if (conditional2) { // conditional2 : 条件式2
+    // [処理B]
     // 条件式1が偽で、条件式2が真のときのみ実行する内容
 } else if (conditional3) { // conditional3 : 条件式3
+    // [処理C]
     // 条件式1と条件式2が偽で、条件式3が真のときのみ実行する内容
 } else {
+    // [処理D]
     // 条件式が全て偽のときのみ実行する内容
 }
 
+// Ex.4
 // elseはなくてもよい
 if (conditional1) { // conditional1 : 条件式1
+    // [処理A]
     // 条件式1が真のときのみ実行する内容
 } else if (conditional2) { // conditional2 : 条件式2
+    // [処理B]
     // 条件式1が偽で、条件式2が真のときのみ実行する内容
 }
+```
+```mermaid
+graph LR
+    ex0(("ex.0"))-->0c{"conditional"}
+    0c--"true"-->0p["処理"]-->0e((終了))
+    0c--"false"-->0e
+
+    ex1(("ex.1"))-->1c{"conditional"}
+    1c--"true"-->1pa["処理A"]-->1e((終了))
+    1c--"false"-->1pb["処理B"]-->1e
+
+    ex2(("ex.2"))-->2c1{"conditional1"}
+    2c1--"true"-->2pa["処理A"]-->2e((終了))
+    2c1--"false"-->2c2{"conditional2"}--"true"-->2pb["処理B"]-->2e
+    2c2--"false"-->2pc["処理C"]-->2e
+
+    ex3(("ex.3"))-->3c1{"conditional1"}
+    3c1--"true"-->3pa["処理A"]-->3e((終了))
+    3c1--"false"-->3c2{"conditional2"}--"true"-->3pb["処理B"]-->3e
+    3c2--"false"-->3c3{"conditional3"}--"true"-->3pc["処理C"]-->3e
+    3c3--"false"-->3pd["処理D"]-->3e
+
+    ex4(("ex.4"))-->4c1{"conditional1"}
+    4c1--"true"-->4pa["処理A"]-->4e((終了))
+    4c1--"false"-->4c2{"conditional2"}--"true"-->4pb["処理B"]-->4e
+    4c2--"false"-->4e
 ```
 
 
