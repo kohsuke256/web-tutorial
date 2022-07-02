@@ -237,6 +237,7 @@ graph LR
 
 ### 構文
 ```js
+// Ex.0
 while (conditional) {
     // 条件式が真の間繰り返し実行する内容
 }
@@ -248,9 +249,17 @@ while (conditional) {
 
 ### 応用
 ```js
+// Ex.1
 while (true) {
+    // [処理]
     // 無限ループする内容
 }
+```
+```mermaid
+graph LR
+    ex0(("ex.0"))-->0c{"conditional"}--"true"-->0p["処理"]-->0c--"false"-->0e["終了"]
+
+    ex1(("ex.1"))-->1p["処理"]-->1p
 ```
 
 
