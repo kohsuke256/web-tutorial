@@ -121,7 +121,7 @@ console.log("Hello world!");
 
 |命令|内容|
 |:--|:--|
-|console.log(<表示内容1>[, 表示内容2...])|デベロッパーツール(検証)のConsoleタブに出力する|
+|console.log(<表示内容1>\[, 表示内容2...])|デベロッパーツール(検証)のConsoleタブに出力する|
 
 
 ## 条件分岐(if文)
@@ -231,4 +231,58 @@ for (let i = 0; i < 10; i++) {
 // 2
 // (中略)
 // 10
+```
+
+## 関数
+
+命令をひとまとめにしてまとめて実行できるもの。  
+数学とはやや異なった意味合いを持つ。  
+実行時に値を与えてそれに合わせて動作を変えたり、逆に値を返してもらったりできる。
+
+### 構文
+```js
+// 関数の定義
+function functionName() {
+    // 実行する内容
+}
+
+// 関数の実行
+functionName();
+```
+
+|命令|内容|
+|:--|:--|
+|function <関数名>(\[引数1, 引数2...]) {<br>実行する内容<br>}|<関数名>という名前の関数を定義する。<br>引数は例を参照|
+|<関数名>()|<関数名>という名の関数を実行する。<br>その関数が値を返す場合は、この式の値はその戻り値(返り値)と呼ばれる値になる。(例参照)|
+|return \[戻り値]|戻り値を返してその関数の処理をそこで終了する。|
+
+```js
+function showHello() {
+    console.log("Hello!");
+}
+
+logHello();
+// -> Hello!
+
+function showMessage(message) {
+    console.log(message);
+}
+
+showMessage("How are you doing?");
+// -> How are you doing?
+
+
+function getTax(price, isReduced) {
+    if (isReduced) {
+        return price * 0.08;
+    } else {
+        return price * 0.10;
+    }
+}
+
+getTax(200, true); // 実行時に priceに200, isReducedにtrue が代入される
+// -> 16
+
+getTax(300, false);
+// -> 30
 ```
